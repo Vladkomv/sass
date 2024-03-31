@@ -141,6 +141,7 @@
   max-height: 580px;
   height: 100vh;
   background-size: cover;
+  background-position: center;
 }
 @media all and (width < 1000px) {
   .produkt--small {
