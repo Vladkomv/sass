@@ -11,8 +11,6 @@
   display: flex;
   padding: s.space(4) 0;
   justify-content: space-between;
-  
-  
 }
 
 .header__block {
@@ -72,15 +70,17 @@
 }
 
 .produkt--dark {
-  .produkt__title, .produkt__description {
+  .produkt__title,
+  .produkt__description {
     color: s.color('background');
   }
 }
 
 .produkt--light {
-  .produkt__title, .produkt__description {
+  .produkt__title,
+  .produkt__description {
     color: s.color('title');
-  }  
+  }
 }
 
 .produkt--big {
@@ -101,6 +101,7 @@
   height: 100vh;
 
   background-size: cover;
+  background-position: center;
 
   @media all and (width < s.screen('tablet')) {
     background-size: 100%;
@@ -125,13 +126,13 @@ $productImage: (
   'iphone-pro' '/img/iphone_pro.png' #000,
   'iphone' '/img/iphone.png' #fafafa,
   'iwatch' '/img/watch.png' #000,
-  'trade-in' '/img/trade_in.png' #FBFBFD,
+  'trade-in' '/img/trade_in.png' #fbfbfd,
   'conference' '/img/conference.png' #000,
-  'ipad' '/img/ipad.png' #FBFBFB,
+  'ipad' '/img/ipad.png' #fbfbfb,
   'business' '/img/business.png' #000,
-  'gift' '/img/gift.png' #FBFBFD,
-  'card' '/img/card.png' #FBFBFD,
-  );
+  'gift' '/img/gift.png' #fbfbfd,
+  'card' '/img/card.png' #fbfbfd
+);
 
 @each $class, $url, $color in $productImage {
   .produkt--#{$class} {
@@ -180,7 +181,7 @@ $productImage: (
 }
 
 .footer__section {
-  @extend .section
+  @extend .section;
 }
 
 .footer {
@@ -192,7 +193,10 @@ $productImage: (
   padding-bottom: s.space(10);
 
   @media all and (width < s.screen('tablet')) {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    );
     row-gap: s.space(4);
   }
 }
@@ -211,7 +215,6 @@ $productImage: (
 
 .footer__link {
   @include s.click;
-  
 }
 
 .link--dark {
